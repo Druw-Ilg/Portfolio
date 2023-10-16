@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Lia = () => {
 	return (
@@ -43,15 +43,13 @@ const Lia = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Technologies</strong>:HTML, Css, JavaScript
+											<strong>Stack</strong>:HTML, Css, JavaScript
 										</li>
 										<li>
 											<strong>Client</strong>: Leadership Institute for
 											Administrators
 										</li>
-										<li>
-											<strong>Project date</strong>: January 2021
-										</li>
+
 										<li>
 											<strong>Project URL</strong>:{" "}
 											<a href="https://lia-sa.com/">www.lia-sa.com</a>
@@ -65,6 +63,9 @@ const Lia = () => {
 										for Administrators of South Africa.
 									</p>
 								</div>
+								<Link to="/work">
+									<i class="bi bi-arrow-left"></i>Back
+								</Link>
 							</div>
 						</div>
 					</div>

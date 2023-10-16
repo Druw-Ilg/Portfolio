@@ -25,11 +25,8 @@ const Header = ({ page }) => {
 						</li>
 
 						<li>
-							<Link
-								to="/portfolio"
-								className={`${page === "portfolio" && "active"}`}
-							>
-								Portfolio
+							<Link to="/work" className={`${page === "work" && "active"}`}>
+								My Work
 							</Link>
 						</li>
 

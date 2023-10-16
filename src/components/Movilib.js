@@ -1,6 +1,6 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-const PortfolioDetails = () => {
+const Movilib = () => {
 	return (
 		<>
 			<main id="main">
@@ -57,13 +57,9 @@ const PortfolioDetails = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Technologies</strong>:React.js, Css, TMDB's API,
-											Firebase
+											<strong>Stack</strong>:React.js, Css, TMDB's API, Firebase
 										</li>
 
-										<li>
-											<strong>Project date</strong>: 16 August, 2021
-										</li>
 										<li>
 											<strong>Project URL</strong>:
 											<a href="https://movilib.web.app/">www.movilib.web.app</a>
@@ -88,6 +84,9 @@ const PortfolioDetails = () => {
 										version.
 									</p>
 								</div>
+								<Link to="/work">
+									<i class="bi bi-arrow-left"></i>Back
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -97,4 +96,4 @@ const PortfolioDetails = () => {
 	);
 };
 
-export default PortfolioDetails;
+export default Movilib;

@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-const FidelleTech = () => {
+const ETSAkombi = () => {
 	return (
 		<>
 			<main id="main">
@@ -25,22 +24,15 @@ const FidelleTech = () => {
 									className="portfolio-details-slider"
 								>
 									<div className="swiper-wrapper align-items-center">
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-1.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/etsakombi.png" alt="" />
 										</SwiperSlide>
 
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-2.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/etsakombi2.png" alt="" />
 										</SwiperSlide>
-
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-3.png" alt="" />
-										</SwiperSlide>
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-4.png" alt="" />
-										</SwiperSlide>
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-5.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/etsakombi3.png" alt="" />
 										</SwiperSlide>
 									</div>
 								</Swiper>
@@ -51,26 +43,29 @@ const FidelleTech = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Stack</strong>: HTML, Bootstrap, Css, JavaScript,
-											Firebase
-										</li>
-										<li>
-											<strong>Client</strong>: Fidelle Tech Support
+											<strong>Stack</strong>: Wordpress
 										</li>
 
 										<li>
 											<strong>Project URL</strong>:{" "}
-											<a href="https://fidelle-tech-support.web.app/">
-												www.fidelle-tech-support.com
-											</a>
+											<a href="https://etsakombi.com/">www.etsakombi.com</a>
 										</li>
 									</ul>
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
 									<p>
-										Professional portfolio developed for Fidelle Tech Support.
-										An authorised IT services provider.
+										"etsakombi", a sleek WordPress website, is your window into
+										the gold trading realm. Developed exclusively by me, this
+										simple yet powerful platform is dedicated to sharing
+										essential information about ETS Akombi, a distinguished
+										gold-selling company.
+										<br />
+										<strong>Key Highlights:</strong>{" "}
+										<em>
+											Simplicity Redefined, Gold Insights, Exclusive
+											Development.
+										</em>
 									</p>
 								</div>
 								<Link to="/work">
@@ -85,4 +80,4 @@ const FidelleTech = () => {
 	);
 };
 
-export default FidelleTech;
+export default ETSAkombi;

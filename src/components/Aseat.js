@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-const FidelleTech = () => {
+const Cinch = () => {
 	return (
 		<>
 			<main id="main">
@@ -25,22 +24,15 @@ const FidelleTech = () => {
 									className="portfolio-details-slider"
 								>
 									<div className="swiper-wrapper align-items-center">
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-1.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/aseat.png" alt="" />
 										</SwiperSlide>
 
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-2.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/aseat2.png" alt="" />
 										</SwiperSlide>
-
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-3.png" alt="" />
-										</SwiperSlide>
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-4.png" alt="" />
-										</SwiperSlide>
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-5.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/aseat3.png" alt="" />
 										</SwiperSlide>
 									</div>
 								</Swiper>
@@ -51,26 +43,36 @@ const FidelleTech = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Stack</strong>: HTML, Bootstrap, Css, JavaScript,
-											Firebase
-										</li>
-										<li>
-											<strong>Client</strong>: Fidelle Tech Support
+											<strong>Stack</strong>: Wordpress
 										</li>
 
 										<li>
 											<strong>Project URL</strong>:{" "}
-											<a href="https://fidelle-tech-support.web.app/">
-												www.fidelle-tech-support.com
-											</a>
+											<a href="/">www.aseat.co.za</a>
 										</li>
 									</ul>
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
 									<p>
-										Professional portfolio developed for Fidelle Tech Support.
-										An authorised IT services provider.
+										Introducing ASEAT, a stellar e-commerce website meticulously
+										crafted on WordPress, where I single-handedly developed
+										every aspect from inception to conception. ASEAT redefines
+										online furniture shopping, offering a seamless blend of
+										cutting-edge technology and aesthetic appeal.
+										<br />
+										<strong>Key Features:</strong>{" "}
+										<em>
+											360-Degree View, User-Centric Interface, Secure
+											Transactions
+										</em>
+										.<br />
+										ASEAT is more than an e-commerce platform; it's a testament
+										to my ability to merge technology with aesthetics to create
+										an exceptional online shopping experience. From concept to
+										execution, I undertook the entire development process,
+										ensuring a bespoke website that stands out in the
+										competitive e-commerce landscape.
 									</p>
 								</div>
 								<Link to="/work">
@@ -85,4 +87,4 @@ const FidelleTech = () => {
 	);
 };
 
-export default FidelleTech;
+export default Cinch;

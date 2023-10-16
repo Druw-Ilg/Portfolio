@@ -354,6 +354,7 @@ h6 {
 #hero .icons-languages {
 	display: flex;
 	flex-direction: column;
+	max-width: 600px;
 }
 
 #hero .icons-languages .bx {
@@ -368,6 +369,12 @@ h6 {
 
 #hero .icons-languages .bx.iconify {
 	padding: 0 10px;
+}
+
+.icons-divider {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #hero .carousel-inner .carousel-item {
@@ -772,26 +779,7 @@ section {
 .portfolio-details .portfolio-details-slider img {
 	width: 100%;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-	margin-top: 20px;
-	position: relative;
-}
-.portfolio-details
-	.portfolio-details-slider
-	.swiper-pagination
-	.swiper-pagination-bullet {
-	width: 12px;
-	height: 12px;
-	background-color: #fff;
-	opacity: 1;
-	border: 1px solid #d9232d;
-}
-.portfolio-details
-	.portfolio-details-slider
-	.swiper-pagination
-	.swiper-pagination-bullet-active {
-	background-color: #d9232d;
-}
+
 .portfolio-details .portfolio-info {
 	padding: 30px;
 	box-shadow: 0px 0 30px rgba(85, 98, 112, 0.08);
@@ -1727,13 +1715,20 @@ section {
 }
 #footer .footer-top {
 	background: #515d6a;
-	padding: 60px 0 30px 0;
+	padding: 10px 0 10px 0;
 }
+
+#footer .footer-top .links-col {
+	margin: 0 auto;
+	text-align: center;
+}
+
 #footer .footer-top .footer-info {
-	margin-bottom: 30px;
+	display: flex;
+	margin: 30px;
 }
 #footer .footer-top .footer-info .logo .footer-logo {
-	max-width: 30%;
+	max-width: 40%;
 }
 #footer .footer-top .footer-info p {
 	font-size: 14px;
@@ -1742,6 +1737,12 @@ section {
 	font-family: "Raleway", sans-serif;
 	color: #fff;
 }
+
+#footer .footer-top .social-links {
+	display: flex;
+	gap: 20px;
+}
+
 #footer .footer-top .social-links a {
 	font-size: 18px;
 	display: inline-block;
@@ -1749,7 +1750,6 @@ section {
 	color: #fff;
 	line-height: 1;
 	padding: 8px 0;
-	margin-right: 4px;
 	border-radius: 4px;
 	text-align: center;
 	width: 36px;
@@ -1768,39 +1768,7 @@ section {
 	position: relative;
 	padding-bottom: 12px;
 }
-#footer .footer-top .footer-links {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-#footer .footer-top .footer-links ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-#footer .footer-top .footer-links ul i {
-	padding-right: 2px;
-	color: rgba(255, 255, 255, 0.6);
-	font-size: 18px;
-	line-height: 1;
-}
-#footer .footer-top .footer-links ul li {
-	padding: 10px 0;
-	display: flex;
-	align-items: center;
-}
-#footer .footer-top .footer-links ul li:first-child {
-	padding-top: 0;
-}
-#footer .footer-top .footer-links ul a {
-	color: rgba(255, 255, 255, 0.6);
-	transition: 0.3s;
-	display: inline-block;
-	line-height: 1;
-}
-#footer .footer-top .footer-links ul a:hover {
-	color: white;
-}
+
 #footer .footer-top .footer-newsletter form {
 	margin-top: 30px;
 	background: #fff;
@@ -1850,7 +1818,15 @@ section {
 }
 
 @media (max-width: 990px) {
-	#footer .footer-top .footer-links {
-		display: block;
+	#footer .footer-info {
+		flex-direction: column;
+		align-items: center;
+	}
+	#footer .footer-info .footer-logo {
+		margin: 0 !important;
+	}
+
+	#footer .footer-info > div {
+		margin-top: 1em;
 	}
 }

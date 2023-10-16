@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Triveho = () => {
 	return (
@@ -41,15 +41,13 @@ const Triveho = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Technologies</strong>: HTML, Bootstrap, Css,
-											JQuery, PHP, MySql
+											<strong>Stack</strong>: HTML, Bootstrap, Css, JQuery, PHP,
+											MySql
 										</li>
 										<li>
 											<strong>Client</strong>: N/A
 										</li>
-										<li>
-											<strong>Project date</strong>: 01 January, 2021
-										</li>
+
 										<li>
 											<strong>Project URL</strong>:{" "}
 											<a href="https://triveho.com/">www.triveho.com</a>
@@ -71,6 +69,9 @@ const Triveho = () => {
 										React.js
 									</p>
 								</div>
+								<Link to="/work">
+									<i class="bi bi-arrow-left"></i>Back
+								</Link>
 							</div>
 						</div>
 					</div>

@@ -4,8 +4,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-const Cinch = () => {
+const CyberSynopsis = () => {
 	return (
 		<>
 			<main id="main">
@@ -25,11 +24,29 @@ const Cinch = () => {
 								>
 									<div className="swiper-wrapper align-items-center">
 										<SwiperSlide className="swiper-slide">
-											<img src="assets/img/portfolio/cinch-3.png" alt="" />
+											<img
+												src="assets/img/portfolio/cybersynopsis.png"
+												alt=""
+											/>
 										</SwiperSlide>
 
 										<SwiperSlide className="swiper-slide">
-											<img src="assets/img/portfolio/cinch-4.png" alt="" />
+											<img
+												src="assets/img/portfolio/cybersynopsis2.png"
+												alt=""
+											/>
+										</SwiperSlide>
+										<SwiperSlide className="swiper-slide">
+											<img
+												src="assets/img/portfolio/cybersynopsis3.png"
+												alt=""
+											/>
+										</SwiperSlide>
+										<SwiperSlide className="swiper-slide">
+											<img
+												src="assets/img/portfolio/cybersynopsis4.png"
+												alt=""
+											/>
 										</SwiperSlide>
 									</div>
 								</Swiper>
@@ -40,20 +57,31 @@ const Cinch = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Stack</strong>: Yoast SEO, Wordpress
+											<strong>Stack</strong>:Wordpress
 										</li>
 
 										<li>
 											<strong>Project URL</strong>:{" "}
-											<a href="https://cinchfin.co.za/">www.cinchfin.com</a>
+											<a href="https://cybersynopsis.co.za/">
+												www.cybersynopsis.co.za
+											</a>
 										</li>
 									</ul>
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
 									<p>
-										SEO and website optimization for Cinchfin. A South African
-										financial services provider.
+										As the creative force behind CyberSynopsis, I proudly
+										introduce a cutting-edge web application developped on the
+										robust WordPress platform. I've harnessed the power of
+										WordPress plugins and customized functionalities to offer
+										businesses a dynamic online solution. One standout feature
+										is CyberSynopsis's unique capability: visitors can
+										effortlessly schedule appointments directly on the platform.
+										The system ensures a smooth user experience, providing
+										instant email confirmations for scheduled appointments. This
+										not only streamlines interactions but also enhances user
+										engagement.
 									</p>
 								</div>
 								<Link to="/work">
@@ -68,4 +96,4 @@ const Cinch = () => {
 	);
 };
 
-export default Cinch;
+export default CyberSynopsis;

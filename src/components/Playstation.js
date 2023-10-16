@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-const FidelleTech = () => {
+const Playstation = () => {
 	return (
 		<>
 			<main id="main">
@@ -25,22 +23,15 @@ const FidelleTech = () => {
 									className="portfolio-details-slider"
 								>
 									<div className="swiper-wrapper align-items-center">
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-1.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/playstation.png" alt="" />
 										</SwiperSlide>
 
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-2.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/playstation2.png" alt="" />
 										</SwiperSlide>
-
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-3.png" alt="" />
-										</SwiperSlide>
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-4.png" alt="" />
-										</SwiperSlide>
-										<SwiperSlide>
-											<img src="assets/img/portfolio/fts-5.png" alt="" />
+										<SwiperSlide className="swiper-slide">
+											<img src="assets/img/portfolio/playstation3.png" alt="" />
 										</SwiperSlide>
 									</div>
 								</Swiper>
@@ -51,17 +42,19 @@ const FidelleTech = () => {
 									<h3>Project information</h3>
 									<ul>
 										<li>
-											<strong>Stack</strong>: HTML, Bootstrap, Css, JavaScript,
-											Firebase
-										</li>
-										<li>
-											<strong>Client</strong>: Fidelle Tech Support
+											<strong>Stack</strong>: React.js, Next.JS
 										</li>
 
 										<li>
 											<strong>Project URL</strong>:{" "}
-											<a href="https://fidelle-tech-support.web.app/">
-												www.fidelle-tech-support.com
+											<a href="https://playstation-druw.vercel.app/">
+												www.playstation-druw.vercel.app
+											</a>
+										</li>
+										<li>
+											<strong>Github</strong>:{" "}
+											<a href="https://github.com/Druw-Ilg/playstation">
+												www.github.com/Druw-Ilg/playstation
 											</a>
 										</li>
 									</ul>
@@ -69,8 +62,9 @@ const FidelleTech = () => {
 								<div className="portfolio-description">
 									<h2>Description</h2>
 									<p>
-										Professional portfolio developed for Fidelle Tech Support.
-										An authorised IT services provider.
+										Responsive PlayStation landing page developed using React.js
+										on the powerful Next.js 13 framework, and styled with CSS3
+										for a sleek and modern look.
 									</p>
 								</div>
 								<Link to="/work">
@@ -85,4 +79,4 @@ const FidelleTech = () => {
 	);
 };
 
-export default FidelleTech;
+export default Playstation;

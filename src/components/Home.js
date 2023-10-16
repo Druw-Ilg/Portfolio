@@ -13,13 +13,26 @@ const Home = () => {
 					data-bs-interval="5000"
 					className="carousel slide carousel-fade"
 					data-bs-ride="carousel"
+					pause="false"
 				>
-					{/* <ol
-						className="carousel-indicators"
-						id="hero-carousel-indicators"
-					></ol> */}
+					<div className="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#heroCarousel"
+							data-bs-slide-to="0"
+							className="active"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#heroCarousel"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+					</div>
 
-					<div className="carousel-inner" role="listbox">
+					<div className="carousel-inner">
 						{/* Slide 1 */}
 						<div
 							className="carousel-item active"
@@ -101,6 +114,14 @@ const Home = () => {
 												title="React"
 												style={{ color: "#00d8ff" }}
 											></i>
+
+											<span className="bx">
+												<iconify-icon
+													icon="logos:nextjs"
+													width="105"
+													title="Next.Js"
+												/>
+											</span>
 										</span>
 										<span className="icons-divider">
 											<span className="bx">
@@ -115,6 +136,7 @@ const Home = () => {
 												<iconify-icon
 													icon="logos:mongodb-icon"
 													width="35"
+													title="MongoDb"
 												></iconify-icon>
 											</span>
 
@@ -158,29 +180,30 @@ const Home = () => {
 						</div>
 					</div>
 
-					<a
+					<button
 						className="carousel-control-prev"
-						href="#heroCarousel"
-						role="button"
+						type="button"
+						data-bs-target="#heroCarousel"
 						data-bs-slide="prev"
 					>
 						<span
-							className="carousel-control-prev-icon bi bi-chevron-left"
+							className="carousel-control-prev-icon"
 							aria-hidden="true"
 						></span>
-					</a>
-
-					<a
+						<span className="visually-hidden">Previous</span>
+					</button>
+					<button
 						className="carousel-control-next"
-						href="#heroCarousel"
-						role="button"
+						type="button"
+						data-bs-target="#heroCarousel"
 						data-bs-slide="next"
 					>
 						<span
-							className="carousel-control-next-icon bi bi-chevron-right"
+							className="carousel-control-next-icon"
 							aria-hidden="true"
 						></span>
-					</a>
+						<span className="visually-hidden">Next</span>
+					</button>
 				</div>
 			</section>
 			<Footer />
