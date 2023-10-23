@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { useTranslation } from "react-i18next";
+
 const Reviews = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Header page={"reviews"} />
@@ -12,12 +16,12 @@ const Reviews = () => {
 				<section id="breadcrumbs" className="breadcrumbs">
 					<div className="container">
 						<div className="d-flex justify-content-between align-items-center">
-							<h2>Testimonials</h2>
+							<h2>{t("Testimonials")}</h2>
 							<ol>
 								<li>
-									<Link to="/">Home</Link>
+									<Link to="/">{t("Home")}</Link>
 								</li>
-								<li>Testimonials</li>
+								<li>{t("Testimonials")}</li>
 							</ol>
 						</div>
 					</div>
@@ -30,10 +34,8 @@ const Reviews = () => {
 								<div className="testimonial-item">
 									<p>
 										<i className="bx bxs-quote-alt-left quote-icon-left"></i>
-										It is hard to find a web developer you can trust nowadays. I
-										can focus on other important aspects of my organization
-										knowing that I can depend on you to take care of my
-										business's online presencece.
+										{t("testimonialsBlessing")}
+
 										<i className="bx bxs-quote-alt-right quote-icon-right"></i>
 									</p>
 									<h3>Blessing</h3>
@@ -44,11 +46,8 @@ const Reviews = () => {
 							<div className="col-lg-6">
 								<div className="testimonial-item mt-4 mt-lg-0">
 									<p>
-										<i className="bx bxs-quote-alt-left quote-icon-left"></i>I
-										really like your work, the site is very nice and contains
-										all information I need to show to my audience. Along with
-										your professionalism, the quality of your services are
-										remarkable.
+										<i className="bx bxs-quote-alt-left quote-icon-left"></i>
+										{t("testimonialsFidelle")}
 										<i className="bx bxs-quote-alt-right quote-icon-right"></i>
 									</p>
 									<h3>Fidelle Banza</h3>
@@ -60,9 +59,8 @@ const Reviews = () => {
 								<div className="testimonial-item mt-4">
 									<p>
 										<i className="bx bxs-quote-alt-left quote-icon-left"></i>
-										An amazing work, I came with a vision for my organization
-										and you were able to come up with a work even better than
-										expected.
+										{t("testimonialsThemba")}
+
 										<i className="bx bxs-quote-alt-right quote-icon-right"></i>
 									</p>
 									<h3>Themba</h3>

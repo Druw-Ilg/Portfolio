@@ -4,8 +4,11 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { useTranslation } from "react-i18next";
 
-const Cinch = () => {
+const Aseat = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -40,14 +43,14 @@ const Cinch = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>: Wordpress
 										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong> {t("Project URL")}</strong>:{" "}
 											<a href="/">www.aseat.co.za</a>
 										</li>
 									</ul>
@@ -55,28 +58,17 @@ const Cinch = () => {
 								<div className="portfolio-description">
 									<h2>Description</h2>
 									<p>
-										Introducing ASEAT, a stellar e-commerce website meticulously
-										crafted on WordPress, where I single-handedly developed
-										every aspect from inception to conception. ASEAT redefines
-										online furniture shopping, offering a seamless blend of
-										cutting-edge technology and aesthetic appeal.
+										{t("aseatDesc")}
 										<br />
-										<strong>Key Features:</strong>{" "}
-										<em>
-											360-Degree View, User-Centric Interface, Secure
-											Transactions
-										</em>
+										<strong>{t("Key Features")}:</strong>{" "}
+										<em>{t("aseatFeatures")}</em>
 										.<br />
-										ASEAT is more than an e-commerce platform; it's a testament
-										to my ability to merge technology with aesthetics to create
-										an exceptional online shopping experience. From concept to
-										execution, I undertook the entire development process,
-										ensuring a bespoke website that stands out in the
-										competitive e-commerce landscape.
+										{t("aseatFeatures2")}
 									</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>
@@ -87,4 +79,4 @@ const Cinch = () => {
 	);
 };
 
-export default Cinch;
+export default Aseat;

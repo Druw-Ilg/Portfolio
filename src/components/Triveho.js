@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 const Triveho = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -38,39 +42,26 @@ const Triveho = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>: HTML, Bootstrap, Css, JQuery, PHP,
 											MySql
 										</li>
-										<li>
-											<strong>Client</strong>: N/A
-										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://triveho.com/">www.triveho.com</a>
 										</li>
 									</ul>
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										Triveho is a platform that i developed using JavaScript,
-										JQuery, Bootstrap and Php/MySql. My inspiration behind this
-										project was to allow people to find travellers with extra
-										luggage space. Also, allow travellers to make extra cash by
-										broadcasting their upcoming journey and carrying a package
-										they are comfortable with. The site has a chat system that
-										enable users to discuss directly via the platform. Triveho
-										remains a work in progress as I keep maintaining the site
-										and adding new features with new technologies such as
-										React.js
-									</p>
+									<p>{t("trivehoDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Select from "react-select";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+
+const lngs = [
+	{
+		value: "en",
+		label: "English",
+		icon: <iconify-icon icon="flagpack:gb-ukm"></iconify-icon>,
+	},
+	{
+		value: "fr",
+		label: "Français",
+		icon: <iconify-icon icon="flag:fr-4x3"></iconify-icon>,
+	},
+];
 
 const Header = ({ page }) => {
 	const [openMenu, setOpenMenu] = useState();
+	const { t, i18n } = useTranslation();
 
 	return (
 		<header id="header" className="fixed-top d-flex align-items-center">
@@ -20,13 +36,13 @@ const Header = ({ page }) => {
 					<ul>
 						<li>
 							<Link to="/" className={`${page === "home" && "active"}`}>
-								Home
+								{t("Home")}
 							</Link>
 						</li>
 
 						<li>
 							<Link to="/work" className={`${page === "work" && "active"}`}>
-								My Work
+								{t("My Work")}
 							</Link>
 						</li>
 
@@ -35,7 +51,7 @@ const Header = ({ page }) => {
 								to="/reviews"
 								className={`${page === "reviews" && "active"}`}
 							>
-								Testimonials
+								{t("Testimonials")}
 							</Link>
 						</li>
 
@@ -46,6 +62,41 @@ const Header = ({ page }) => {
 							>
 								Contact
 							</Link>
+						</li>
+						<li style={!openMenu ? { marginLeft: "17px" } : {}}>
+							{/* translator switcher */}
+							<Select
+								options={lngs}
+								isSearchable={false}
+								defaultValue={lngs[0]}
+								onChange={(lng) => i18n.changeLanguage(lng.value)}
+								getOptionLabel={(lng) => (
+									<div>
+										<span>{lng.label} </span>
+										<span>{lng.icon}</span>
+									</div>
+								)}
+								getOptionValue={(lng) => lng.value}
+							/>
+							{/* <select
+								name="languages"
+								onChange={(e) => i18n.changeLanguage(e.target.value)}
+							>
+								<option value="English">English</option>
+								<option value="french">
+									Français{" "}
+									<img
+										src="assets/img/france.png"
+										alt=""
+										className="img-fluid"
+									/>
+								</option>
+								{Object.keys(lngs).map((lng) => (
+									<option value={lng} key={lng.toString()}>
+										{lngs[lng].nativeLanguage}
+									</option>
+								))}
+							</select> */}
 						</li>
 					</ul>
 					<i

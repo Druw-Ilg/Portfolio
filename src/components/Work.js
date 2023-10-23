@@ -5,8 +5,11 @@ import Isotope from "isotope-layout";
 import Header from "./Header";
 import Footer from "./Footer";
 import GLightbox from "glightbox";
+import { useTranslation } from "react-i18next";
 
 const Work = () => {
+	const { t } = useTranslation();
+
 	/**
 	 * Initiate portfolio lightbox
 	 */
@@ -61,9 +64,9 @@ const Work = () => {
 							<h2>Work</h2>
 							<ol>
 								<li>
-									<Link to="/">Home</Link>
+									<Link to="/">{t("Home")}</Link>
 								</li>
-								<li>Work</li>
+								<li>{t("My Work")}</li>
 							</ol>
 						</div>
 					</div>

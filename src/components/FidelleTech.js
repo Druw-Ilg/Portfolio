@@ -5,8 +5,11 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { useTranslation } from "react-i18next";
 
 const FidelleTech = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -48,18 +51,15 @@ const FidelleTech = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>: HTML, Bootstrap, Css, JavaScript,
 											Firebase
 										</li>
-										<li>
-											<strong>Client</strong>: Fidelle Tech Support
-										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://fidelle-tech-support.web.app/">
 												www.fidelle-tech-support.com
 											</a>
@@ -68,13 +68,11 @@ const FidelleTech = () => {
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										Professional portfolio developed for Fidelle Tech Support.
-										An authorised IT services provider.
-									</p>
+									<p>{t("fidelleTechDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

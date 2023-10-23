@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Lia = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -40,31 +43,25 @@ const Lia = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>:HTML, Css, JavaScript
 										</li>
-										<li>
-											<strong>Client</strong>: Leadership Institute for
-											Administrators
-										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://lia-sa.com/">www.lia-sa.com</a>
 										</li>
 									</ul>
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										Professional website developed for the Leadership Institute
-										for Administrators of South Africa.
-									</p>
+									<p>{t("liaDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Movilib = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -54,14 +57,14 @@ const Movilib = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>:React.js, Css, TMDB's API, Firebase
 										</li>
 
 										<li>
-											<strong>Project URL</strong>:
+											<strong>{t("Project URL")}</strong>:
 											<a href="https://movilib.web.app/">www.movilib.web.app</a>
 										</li>
 										<li>
@@ -74,18 +77,11 @@ const Movilib = () => {
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										Movie library inspired by Netflix. Movilib is a React.js
-										application using TMDB api and deployed on firebase. It
-										contains a wide suggestion of movies and allows to watch
-										movie trailers. This app is still an ongoing project as I
-										plan to add several features to it for an amazing user
-										experience and also, I envision a mobile application
-										version.
-									</p>
+									<p>{t("movilibDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

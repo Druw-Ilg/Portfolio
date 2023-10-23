@@ -5,7 +5,11 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import { useTranslation } from "react-i18next";
+
 const ETSAkombi = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -40,14 +44,14 @@ const ETSAkombi = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>: Wordpress
 										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://etsakombi.com/">www.etsakombi.com</a>
 										</li>
 									</ul>
@@ -55,21 +59,15 @@ const ETSAkombi = () => {
 								<div className="portfolio-description">
 									<h2>Description</h2>
 									<p>
-										"etsakombi", a sleek WordPress website, is your window into
-										the gold trading realm. Developed exclusively by me, this
-										simple yet powerful platform is dedicated to sharing
-										essential information about ETS Akombi, a distinguished
-										gold-selling company.
+										{t("etsAkombiDesc")}
 										<br />
-										<strong>Key Highlights:</strong>{" "}
-										<em>
-											Simplicity Redefined, Gold Insights, Exclusive
-											Development.
-										</em>
+										<strong>{t("Key Highlights")}:</strong>{" "}
+										<em>{t("etsAkombiFeatures")}</em>
 									</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

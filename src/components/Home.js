@@ -2,11 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Header page={"home"} />
+
 			<section id="hero">
 				<div
 					id="heroCarousel"
@@ -41,27 +45,16 @@ const Home = () => {
 							<div className="carousel-container">
 								<div className="container">
 									<h2 className="animate__animated animate__fadeInDown">
-										Hi, I'm <span>Andruw Ilagou</span>
+										{t("Hi, I'm")} <span>Andruw Ilagou</span>
 									</h2>
 									<p className="animate__animated animate__fadeInUp">
-										<span style={{ fontWeight: "600" }}>
-											A motivated software developer
-										</span>{" "}
-										with the ability to challenge others and myself to develop
-										solutions to problems and situations. I am driven by growth
-										within this field of work. I have shown strong leadership
-										skills with an understanding of both individual and team
-										goals to collaboratively work towards a common objective. My
-										aspiration as a software developer is to develop solutions
-										to technology’s complex problems and use the knowledge I
-										possess to improve the quality and ease of work in
-										businesses through software.
+										{t("homeIntro")}
 									</p>
 									<Link
 										to="/contact"
 										className="btn-get-started animate__animated animate__fadeInUp scrollto"
 									>
-										Contact Me
+										{t("ContactMe")}
 									</Link>
 								</div>
 							</div>
@@ -75,7 +68,7 @@ const Home = () => {
 							<div className="carousel-container">
 								<div className="container">
 									<h2 className="animate__animated animate__fadeInDown">
-										My Skills
+										{t("mySkills")}
 									</h2>
 									<p className="animate__animated animate__fadeInUp icons-languages">
 										<span className="icons-divider">
@@ -173,7 +166,7 @@ const Home = () => {
 										to="/contact"
 										className="btn-get-started animate__animated animate__fadeInUp scrollto"
 									>
-										Contact Me
+										{t("ContactMe")}
 									</Link>
 								</div>
 							</div>

@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import i18next from "i18next";
+
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<footer id="footer">
@@ -18,7 +23,7 @@ const Footer = () => {
 										/>
 									</Link>
 									<div>
-										<h4>Get in touch with me:</h4>
+										<h4>{t("Get in touch with me")}:</h4>
 										<div className="social-links mt-3">
 											<a
 												href="https://www.linkedin.com/in/andruw-ilagou-507745198"
@@ -46,7 +51,7 @@ const Footer = () => {
 						<strong>
 							<span>Andruw Ilagou</span>
 						</strong>
-						. All Rights Reserved
+						. {i18next.t("All Rights Reserved", "All Rights Reserved")}
 					</div>
 				</div>
 			</footer>

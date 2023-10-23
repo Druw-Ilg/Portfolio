@@ -4,7 +4,12 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+import { useTranslation } from "react-i18next";
+
 const CyberSynopsis = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -54,14 +59,14 @@ const CyberSynopsis = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>:Wordpress
 										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://cybersynopsis.co.za/">
 												www.cybersynopsis.co.za
 											</a>
@@ -70,22 +75,11 @@ const CyberSynopsis = () => {
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										As the creative force behind CyberSynopsis, I proudly
-										introduce a cutting-edge web application developped on the
-										robust WordPress platform. I've harnessed the power of
-										WordPress plugins and customized functionalities to offer
-										businesses a dynamic online solution. One standout feature
-										is CyberSynopsis's unique capability: visitors can
-										effortlessly schedule appointments directly on the platform.
-										The system ensures a smooth user experience, providing
-										instant email confirmations for scheduled appointments. This
-										not only streamlines interactions but also enhances user
-										engagement.
-									</p>
+									<p>{t("cyberDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

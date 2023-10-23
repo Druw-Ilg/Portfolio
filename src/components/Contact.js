@@ -6,7 +6,11 @@ import { collection, addDoc } from "firebase/firestore";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { useTranslation } from "react-i18next";
+
 const Contact = () => {
+	const { t } = useTranslation();
+
 	const [newName, setNewName] = useState("");
 	const [newEmail, setNewEmail] = useState("");
 	const [newSubject, setNewSubject] = useState("");
@@ -42,7 +46,7 @@ const Contact = () => {
 							<h2>Contact</h2>
 							<ol>
 								<li>
-									<Link to="/">Home</Link>
+									<Link to="/">{t("Home")}</Link>
 								</li>
 								<li>Contact</li>
 							</ol>
@@ -72,7 +76,7 @@ const Contact = () => {
 												name="name"
 												className="form-control"
 												id="name"
-												placeholder="Your Name"
+												placeholder={t("Your Name")}
 												required
 												onChange={(event) => {
 													setNewName(event.target.value);
@@ -85,7 +89,7 @@ const Contact = () => {
 												className="form-control"
 												name="email"
 												id="email"
-												placeholder="Your Email"
+												placeholder={t("Your Email")}
 												required
 												onChange={(event) => {
 													setNewEmail(event.target.value);
@@ -99,7 +103,7 @@ const Contact = () => {
 											className="form-control"
 											name="subject"
 											id="subject"
-											placeholder="Subject"
+											placeholder={t("Subject")}
 											required
 											onChange={(event) => {
 												setNewSubject(event.target.value);
@@ -119,11 +123,9 @@ const Contact = () => {
 										></textarea>
 									</div>
 									<div className="my-3">
-										<div className="loading">Loading</div>
+										<div className="loading">{t("Loading")}</div>
 										<div className="error-message"></div>
-										<div className="sent-message">
-											Your message has been sent. Thank you!
-										</div>
+										<div className="sent-message">{t("MessageSent")}</div>
 									</div>
 									<div className="text-center">
 										<button
@@ -133,7 +135,7 @@ const Contact = () => {
 												createMessage();
 											}}
 										>
-											Send Message
+											{t("Send Message")}
 										</button>
 									</div>
 								</form>

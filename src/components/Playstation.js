@@ -4,7 +4,12 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+import { useTranslation } from "react-i18next";
+
 const Playstation = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -39,14 +44,14 @@ const Playstation = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>: React.js, Next.JS
 										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://playstation-druw.vercel.app/">
 												www.playstation-druw.vercel.app
 											</a>
@@ -61,14 +66,11 @@ const Playstation = () => {
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										Responsive PlayStation landing page developed using React.js
-										on the powerful Next.js 13 framework, and styled with CSS3
-										for a sleek and modern look.
-									</p>
+									<p>{t("playStationDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>

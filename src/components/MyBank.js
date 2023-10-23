@@ -4,7 +4,12 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+import { useTranslation } from "react-i18next";
+
 const MyBank = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<main id="main">
@@ -45,7 +50,7 @@ const MyBank = () => {
 
 							<div className="col-lg-4">
 								<div className="portfolio-info">
-									<h3>Project information</h3>
+									<h3>{t("Project information")}</h3>
 									<ul>
 										<li>
 											<strong>Stack</strong>:JavaScript, Next.JS, Bootstrap,
@@ -53,7 +58,7 @@ const MyBank = () => {
 										</li>
 
 										<li>
-											<strong>Project URL</strong>:{" "}
+											<strong>{t("Project URL")}</strong>:{" "}
 											<a href="https://my-bank-six.vercel.app/">
 												www.my-bank-six.vercel.app
 											</a>
@@ -68,19 +73,11 @@ const MyBank = () => {
 								</div>
 								<div className="portfolio-description">
 									<h2>Description</h2>
-									<p>
-										My-Bank is an online banking web app using all CRUD
-										functions. The app allows users to create an account and
-										perfrom several operations. At registration it automatically
-										assigns a "Check account" to the user, he/she can directly
-										make a deposit, create a business or saving account. The
-										user can also make a transfer to one of his/her other
-										account and make a payment to another user account on the
-										app.
-									</p>
+									<p>{t("myBankDesc")}</p>
 								</div>
 								<Link to="/work">
-									<i class="bi bi-arrow-left"></i>Back
+									<i class="bi bi-arrow-left"></i>
+									{t("Back")}
 								</Link>
 							</div>
 						</div>
