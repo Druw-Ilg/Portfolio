@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 import Isotope from "isotope-layout";
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css"; // Import CSS
 import { useTranslation } from "react-i18next";
@@ -144,6 +144,14 @@ const Work = () => {
                   >
                     WordPress
                   </li>
+                  <li
+                    data-filter=".SMM"
+                    onClick={(e) => {
+                      filterPortfolio(e.target);
+                    }}
+                  >
+                    SMM
+                  </li>
                 </ul>
               </div>
             </div>
@@ -170,7 +178,6 @@ const Work = () => {
                       <Link
                         to="/movilib"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -201,7 +208,6 @@ const Work = () => {
                       <Link
                         to="/triveho"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -232,7 +238,6 @@ const Work = () => {
                       <Link
                         to="/fidelle-tech"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -262,7 +267,6 @@ const Work = () => {
                       <Link
                         to="/cyberSynopsis"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -293,7 +297,6 @@ const Work = () => {
                       <Link
                         to="/cinch"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -324,7 +327,6 @@ const Work = () => {
                       <Link
                         to="/lia-sa"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -354,7 +356,6 @@ const Work = () => {
                       <Link
                         to="/my-bank"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -384,7 +385,6 @@ const Work = () => {
                       <Link
                         to="/playstation"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -414,7 +414,6 @@ const Work = () => {
                       <Link
                         to="/aseat"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
@@ -444,7 +443,64 @@ const Work = () => {
                       <Link
                         to="/etsakombi"
                         className="portfolio-details-lightbox"
-                        data-glightbox="type: external"
+                        title="Portfolio Details"
+                      >
+                        <i className="bx bx-link"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 portfolio-item SMM">
+                <div className="portfolio-wrap">
+                  <img
+                    src="../assets/img/portfolio/Foodie_stats.png"
+                    className="img-fluid"
+                    alt=""
+                  />
+                  <div className="portfolio-info">
+                    <h4>Foodie Gabon</h4>
+                    <p></p>
+                    <div className="portfolio-links">
+                      <a
+                        href="../assets/img/portfolio/Foodie_Face.jpg"
+                        data-gallery="portfolioGallery"
+                        className="portfolio-lightbox"
+                      >
+                        <i className="bx bx-plus"></i>
+                      </a>
+                      <Link
+                        to="/Foodie"
+                        className="portfolio-details-lightbox"
+                        title="Portfolio Details"
+                      >
+                        <i className="bx bx-link"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 portfolio-item SMM">
+                <div className="portfolio-wrap">
+                  <img
+                    src="../assets/img/portfolio/fango_stats.png"
+                    className="img-fluid"
+                    alt="Frango"
+                  />
+                  <div className="portfolio-info">
+                    <h4>Frango Grill Gabon</h4>
+                    <p></p>
+                    <div className="portfolio-links">
+                      <a
+                        href="../assets/img/portfolio/Frango_TikTok.jpg"
+                        data-gallery="portfolioGallery"
+                        className="portfolio-lightbox"
+                      >
+                        <i className="bx bx-plus"></i>
+                      </a>
+                      <Link
+                        to="/Frango"
+                        className="portfolio-details-lightbox"
                         title="Portfolio Details"
                       >
                         <i className="bx bx-link"></i>
